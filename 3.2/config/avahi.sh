@@ -3,7 +3,7 @@
 # Configure the mDNS hostname on avahi
 if [ -n "${MDNS_HOSTNAME}" ]; then
 
-    # MDNS_HOSTNAME could be redis.local or redis.sub.local
+    # MDNS_HOSTNAME could be elasticsearch.local or elasticsearch.sub.local
     IFS='.' read -ra MDNS_HOSTNAME_PARTS <<< "${MDNS_HOSTNAME}"
 
     # Save the first part as host part
@@ -29,5 +29,11 @@ sed \
   -e 's/^\(rlimit\)/#\1/g' \
   -i /etc/avahi/avahi-daemon.conf
 
+# If a avahi daemon is running, kill it
+avahi-daemon -c && avahi-daemon -k
+
+# Clean up orphans
+rm -rf /run/avahi-daemon/{pid,socket}
+
 # Start avahi
-/usr/sbin/avahi-daemon --no-rlimits
+avahi-daemon --no-rlimits
