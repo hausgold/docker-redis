@@ -1,8 +1,19 @@
 ![mDNS enabled official/redis](https://raw.githubusercontent.com/hausgold/docker-redis/master/docs/assets/project.png)
 
+[![Source Code](https://img.shields.io/badge/source-on%20github-blue.svg)](https://github.com/hausgold/docker-redis)
+[![Docker Image](https://img.shields.io/badge/image-on%20docker%20hub-blue.svg)](https://hub.docker.com/r/hausgold/redis/)
+
 This Docker images provides the [official/redis](https://hub.docker.com/_/redis/) image as base
 with the mDNS/ZeroConf stack on top. So you can enjoy [redis](https://redis.io/) while
 it is accessible by default as *redis.local*. (Port 6379)
+
+- [Requirements](#requirements)
+- [Getting starting](#getting-starting)
+- [docker-compose usage example](#docker-compose-usage-example)
+- [Host configs](#host-configs)
+- [Configure a different mDNS hostname](#configure-a-different-mdns-hostname)
+- [Other top level domains](#other-top-level-domains)
+- [Further reading](#further-reading)
 
 ## Requirements
 
