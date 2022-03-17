@@ -15,6 +15,7 @@ RUN chmod +x /usr/local/bin/avahi.sh
 
 # Configure supervisord
 COPY config/supervisor/* /etc/supervisor/conf.d/
+RUN mkdir -p /var/log/supervisor
 
 # Define the command to run per default
 CMD /usr/bin/supervisord -nc /etc/supervisor/supervisord.conf
