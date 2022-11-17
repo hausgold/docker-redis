@@ -1,4 +1,4 @@
-FROM redis:4.0
+FROM redis:7.0
 MAINTAINER Hermann Mayer "hermann.mayer@hausgold.de"
 
 # You can change this environment variable on run's with -e
