@@ -9,9 +9,9 @@ RUN apt-get update -yqqq && \
   apt-get install -y \
     dbus avahi-daemon avahi-utils libnss-mdns supervisor
 
-# Copy avahi.sh
-COPY config/avahi.sh /usr/local/bin/
-RUN chmod +x /usr/local/bin/avahi.sh
+# Copy custom scripts
+COPY config/*.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/*
 
 # Configure supervisord
 COPY config/supervisor/* /etc/supervisor/conf.d/
