@@ -25,4 +25,4 @@ chmod ugo+rwx /var/run/dbus/ /run/dbus
 # EOF
 
 # Start dbus
-exec /usr/bin/dbus-daemon --system --nofork --syslog
+exec /usr/bin/dbus-daemon --system --nofork
