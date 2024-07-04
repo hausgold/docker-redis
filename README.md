@@ -39,6 +39,8 @@ redis:
   environment:
     # Mind the .local suffix
     - MDNS_HOSTNAME=redis.test.local
+    # We allow additional redis-server arguments via: (default)
+    - REDIS_ARGS="--databases 1000"
   ports:
     # The ports are just for you to know when configure your
     # container links, on depended containers

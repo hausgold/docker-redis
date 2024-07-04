@@ -3,6 +3,7 @@ MAINTAINER Hermann Mayer "hermann.mayer@hausgold.de"
 
 # You can change this environment variable on run's with -e
 ENV MDNS_HOSTNAME=redis.local
+ENV REDIS_ARGS='--databases 1000'
 
 # Install system packages
 RUN apt-get update -yqqq && \
