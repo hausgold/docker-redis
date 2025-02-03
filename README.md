@@ -1,3 +1,9 @@
+> [!WARNING]
+> This repository is archived. No new images will be published to the Docker
+> Hub due to the Redis license change. Please switch to
+> [docker-valkey](https://github.com/hausgold/docker-valkey), the mDNS-enabled
+> valkey/valkey image as alternative.
+
 ![mDNS enabled official/redis](https://raw.githubusercontent.com/hausgold/docker-redis/master/docs/assets/project.png)
 
 [![Continuous Integration](https://github.com/hausgold/docker-redis/actions/workflows/package.yml/badge.svg?branch=master)](https://github.com/hausgold/docker-redis/actions/workflows/package.yml)
